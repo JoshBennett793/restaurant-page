@@ -1,0 +1,31 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	background: rgba(0,0,0,0.5);
+	width: 100vw;
+	height: 75px;
+	color: white;
+
+	display: grid;
+	grid-template-rows: 2fr 1fr;
+}
+
+.rest-name {
+	justify-self: center;
+	font-size: 2rem;
+}
+
+.header ul {
+	list-style: none;
+	display: grid;
+	margin: 0 auto;
+	gap: 80px;
+	grid-auto-flow: column;
+}
+
+.header li {
+	cursor: pointer;
+}
