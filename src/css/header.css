@@ -5,25 +5,33 @@
 
 .header {
 	background: rgba(0,0,0,0.5);
+	height: 120px;
 	width: 100vw;
-	height: 75px;
 	color: white;
 
 	display: grid;
 	grid-template-rows: 2fr 1fr;
+
+	position: sticky;
+	top: 0;
 }
 
 .rest-name {
+	font-size: 2.4rem;
+	padding-top: 15px;
 	justify-self: center;
-	font-size: 2rem;
 }
 
 .header ul {
 	list-style: none;
+	font-size: 1.4rem;
+
 	display: grid;
-	margin: 0 auto;
-	gap: 80px;
 	grid-auto-flow: column;
+	align-items: center;
+
+	margin: 0 auto;
+	gap: 90px;
 }
 
 .header li {
