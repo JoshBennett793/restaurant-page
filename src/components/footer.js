@@ -11,16 +11,17 @@ export default function createFooter() {
   content.appendChild(footerContainer);
 
   const footerText = document.createElement("span");
-  footerText.innerHTML = `Copyright © ${new Date().getFullYear()} | JoshBennett793&nbsp;<i class="fab fa-github"></i>`;
+  footerText.innerHTML = `Copyright © ${new Date().getFullYear()} | JoshBennett793&nbsp;`;
 
 	// link icon to github repo
   const icon = document.createElement("a");
   icon.href = "https://github.com/joshbennett793/restaurant-page";
   icon.ariaLabel = "Link to tic tac toe project github repository";
   icon.target = "_blank";
+	icon.innerHTML = `<i class="fab fa-github"></i>`;
 
   footerContainer.appendChild(footerText);
-  footerContainer.appendChild(icon);
+  footerText.appendChild(icon);
 
   return content;
 }
