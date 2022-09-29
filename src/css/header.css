@@ -3,7 +3,7 @@
 	margin: 0;
 }
 
-.header {
+header {
 	background: rgba(0,0,0,0.5);
 	height: 120px;
 	width: 100vw;
@@ -23,18 +23,18 @@
 	justify-self: center;
 }
 
-.header ul {
-	list-style: none;
-	font-size: 1.4rem;
+header ul {
+list-style: none;
+font-size: 1.4rem;
 
-	display: grid;
-	grid-auto-flow: column;
+display: grid;
+grid-auto-flow: column;
 	align-items: center;
 
 	margin: 0 auto;
 	gap: 90px;
 }
 
-.header li {
+header li {
 	cursor: pointer;
 }

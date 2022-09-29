@@ -7,8 +7,7 @@ export default function createFooter() {
 
   const content = document.getElementById("content");
 
-  const footerContainer = document.createElement("div");
-  footerContainer.className = "footer";
+  const footerContainer = document.createElement("footer");
   content.appendChild(footerContainer);
 
   const footerText = document.createElement("span");

@@ -1,7 +1,7 @@
 export default function createHeader() {
   const content = document.getElementById("content");
 
-  const headerContainer = document.createElement("div");
+  const headerContainer = document.createElement("header");
   headerContainer.className = "header";
   content.appendChild(headerContainer);
 
