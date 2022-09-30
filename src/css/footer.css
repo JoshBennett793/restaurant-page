@@ -1,0 +1,22 @@
+footer {
+  font-size: 1.2rem;
+	color: white;
+	background: rgba(0,0,0,0.5);
+  height: 120px;
+	width: 100vw;
+  display: flex;
+	justify-content: center;
+  align-items: center;
+	grid-row: -1;
+}
+
+.fa-github {
+  width: 1rem;
+	color: white;
+  transition: transform 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}

@@ -1,14 +1,40 @@
-#content {
-	height: 100vh;
+:root {
+  --header-height: 120px;
+  --footer-height: 120px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background: black;
+}
+
+#content {
+  height: 100vh;
+}
+
+#content-wrap {
+  height: calc(200vh - (var(--header-height) + var(--footer-height)));
+  display: flex;
+  flex-direction: column;
+}
 
 .top-img-cont {
-	height: 100%;
-	width: 100vw;
-	background: url(/src/media/beer-taps.jpg);
-	background-size: cover;
-	position: absolute;
-	top: 0;
-	z-index: 10;
+  height: calc(100vh - var(--header-height));
+  width: 100vw;
+  background: url(/src/media/beer-taps.jpg);
+  background-size: cover;
+}
+
+.bottom-img-cont {
+  height: calc(100vh - var(--footer-height));
+  width: 100vw;
+  background: url(/src/media/beer-taps.jpg);
+  background-size: cover;
 }
