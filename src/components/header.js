@@ -2,7 +2,6 @@ export default function createHeader() {
   const content = document.getElementById("content");
 
   const headerContainer = document.createElement("header");
-  headerContainer.className = "header";
   content.appendChild(headerContainer);
 
   const restaurantName = document.createElement("p");

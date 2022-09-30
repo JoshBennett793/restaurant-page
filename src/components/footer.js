@@ -13,7 +13,6 @@ export default function createFooter() {
   const footerText = document.createElement("span");
   footerText.innerHTML = `Copyright © ${new Date().getFullYear()} | JoshBennett793&nbsp;`;
 
-	// link icon to github repo
   const icon = document.createElement("a");
   icon.href = "https://github.com/joshbennett793/restaurant-page";
   icon.ariaLabel = "Link to tic tac toe project github repository";
