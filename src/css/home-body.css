@@ -1,6 +1,22 @@
 :root {
-  --header-height: 120px;
-  --footer-height: 120px;
+	--font-color: rgb(234, 234, 234);
+	--font-size: 12vw;
+	--mobile-font-size: 25vw;
+}
+
+@font-face {
+	font-family: "Sandrina";
+	src: url(/src/fonts/Sandrina.ttf);
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "England";
+	src: url(/src/fonts/England.otf),
+		url(/src/fonts/England.ttf);
+	font-weight: 400;
+	font-style: normal;
 }
 
 * {
@@ -19,22 +35,38 @@ body {
   height: 100vh;
 }
 
-#content-wrap {
-  height: calc(200vh - (var(--header-height) + var(--footer-height)));
-  display: flex;
-  flex-direction: column;
+.img-cont {
+	height: 100vh;
+  width: 100vw;
+  background: 
+	linear-gradient(
+		to left,
+		rgba(0, 0, 0, 0.3),
+		rgba(0, 0, 0, 0.7)			
+		),
+		url(/src/media/restaurant-img.jpg);
+	text-shadow: 0 3px 1px black;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
 
-.top-img-cont {
-  height: calc(100vh - var(--header-height));
-  width: 100vw;
-  background: url(/src/media/beer-taps.jpg);
-  background-size: cover;
+.img-text-cont {
+	margin-left: 10vw;
 }
 
-.bottom-img-cont {
-  height: calc(100vh - var(--footer-height));
-  width: 100vw;
-  background: url(/src/media/beer-taps.jpg);
-  background-size: cover;
+.restaurant-name {
+	font-family: "Sandrina", "England", Verdana, Tahoma, sans-serif;
+	color: var(--font-color);
+	font-size: var(--font-size);
+}
+
+@media only screen and (max-width: 834px) {
+
+	.restaurant-name {
+		font-size: var(--mobile-font-size);
+	}
 }

@@ -4,11 +4,6 @@ export default function createHeader() {
   const headerContainer = document.createElement("header");
   content.appendChild(headerContainer);
 
-  const restaurantName = document.createElement("p");
-  restaurantName.className = "rest-name";
-  restaurantName.textContent = "Avery's Irish Pub";
-  headerContainer.appendChild(restaurantName);
-
   const tabList = document.createElement("ul");
   headerContainer.appendChild(tabList);
 
