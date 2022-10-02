@@ -1,6 +1,8 @@
 header {
-	width: 30vw;
   color: rgb(245, 245, 245);
+
+	display: flex;
+	align-items: center;
 
   position: fixed;
   top: 0;
@@ -10,21 +12,32 @@ header {
 header ul {
   list-style: none;
   font-size: 1.8rem;
-	padding: 2rem 2rem;
+	padding: 32px;
 
 	display: flex;
 	align-items: center;
 	gap: 3rem;
-
+	
 }
 
 header li {
-  cursor: pointer;
+	font-family: "Nesans", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	cursor: pointer;
+}
+
+.name {
+	font-family: "Alexandra", Verdana, Tahoma, sans-serif;
+	font-size: clamp(4vw, 5.5vw, 7vw);
+	margin-left: 14px;
 }
 
 @media only screen and (max-width: 834px) {
 	header ul {
-		font-size: 1.3rem;
-		gap: 2rem;
+		font-size: 1.5rem;
+		gap: 1rem;
+	}
+	
+	.name {
+		font-size: 10vw;
 	}
 }

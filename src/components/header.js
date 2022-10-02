@@ -22,5 +22,10 @@ export default function createHeader() {
   contactTab.textContent = "Contact";
   tabList.appendChild(contactTab);
 
+	const restaurantName = document.createElement("h2");
+	restaurantName.className = "name";
+	restaurantName.textContent = "Aroma";
+	headerContainer.appendChild(restaurantName);
+
   return content;
 }
