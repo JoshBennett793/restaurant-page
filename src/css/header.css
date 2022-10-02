@@ -1,43 +1,48 @@
 header {
+  width: 100vw;
   color: rgb(245, 245, 245);
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.7);
 
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 
   position: fixed;
   top: 0;
-	z-index: 2;
+  z-index: 2;
 }
 
 header ul {
   list-style: none;
   font-size: 1.8rem;
-	padding: 32px;
+  padding: 32px;
 
-	display: flex;
-	align-items: center;
-	gap: 3rem;
-	
+  display: flex;
+  align-items: center;
+  gap: 0 3rem;
 }
 
 header li {
-	font-family: "Nesans", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	cursor: pointer;
+  font-family: "Nesans", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
+  cursor: pointer;
 }
 
 .name {
-	font-family: "Alexandra", Verdana, Tahoma, sans-serif;
-	font-size: clamp(4vw, 5.5vw, 7vw);
-	margin-left: 14px;
+  font-family: "Alexandra", Verdana, Tahoma, sans-serif;
+  font-size: clamp(4vw, 5.5vw, 7vw);
+  margin-left: 14px;
 }
 
 @media only screen and (max-width: 834px) {
-	header ul {
-		font-size: 1.5rem;
-		gap: 1rem;
-	}
-	
-	.name {
-		font-size: 10vw;
-	}
+  header ul {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+
+  .name {
+    font-size: 10vw;
+  }
 }
