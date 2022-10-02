@@ -12,7 +12,7 @@ export default function createFooter() {
 
   const ghIcon = document.createElement("a");
   ghIcon.href = "https://github.com/joshbennett793/restaurant-page";
-  ghIcon.ariaLabel = "Link to restaurant page project github repository";
+  ghIcon.ariaLabel = "Link to github repository";
   ghIcon.target = "_blank";
 	ghIcon.innerHTML = `<i class="fab fa-github"></i>`;
 	
