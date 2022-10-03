@@ -1,93 +1,153 @@
+class Header {
+  constructor(header) {
+    this.header = header;
+  }
 
+  writeToDOM() {
+    const menuContainer = document.querySelector(".menu-container");
+
+    const header = document.createElement("div");
+    header.className = "menu-header";
+    menuContainer.appendChild(header);
+
+    const headerTitle = document.createElement("p");
+    headerTitle.className = "menu-header-title";
+    headerTitle.textContent = this.header.toUpperCase();
+    header.appendChild(headerTitle);
+
+    const headerContent = document.createElement("div");
+    headerContent.className = `${this.header}-menu content-container`;
+    header.appendChild(headerContent);
+  }
+}
+
+class Meal {
+  constructor(type, title, desc, price) {
+    this.type = type;
+    this.title = title;
+    this.desc = desc;
+    this.price = price;
+  }
+
+  writeToDOM() {
+    let header = document.querySelector(`.${this.type}-menu`);
+
+    const mealTitle = document.createElement("p");
+    const mealDesc = document.createElement("p");
+    const mealPrice = document.createElement("p");
+
+    mealTitle.className = "meal-title";
+    mealDesc.className = "meal-desc";
+    mealPrice.className = "meal-price";
+
+    mealTitle.textContent = this.title.toUpperCase();
+    mealDesc.textContent = this.desc;
+    mealPrice.textContent = this.price;
+
+    header.appendChild(mealTitle);
+    header.appendChild(mealDesc);
+    header.appendChild(mealPrice);
+  }
+}
 
 export default function createBody() {
   const content = document.getElementById("content");
 
-  const imgContainer = document.createElement("div");
-  imgContainer.className = "img-cont";
-  content.appendChild(imgContainer);
-
   const menuContainer = document.createElement("div");
   menuContainer.className = "menu-container";
-  imgContainer.appendChild(menuContainer);
+  content.appendChild(menuContainer);
 
-  const starters = document.createElement("div");
-  const entrees = document.createElement("div");
-  const sides = document.createElement("div");
-  const sweets = document.createElement("div");
+  const starters = new Header("starters").writeToDOM();
 
-  starters.className = "starters-menu menu-header";
-  entrees.className = "entrees-menu menu-header";
-  sides.className = "sides-menu menu-header";
-  sweets.className = "sweets-menu menu-header";
+  const beet = new Meal(
+    "starters",
+    "beet and burrata",
+    "orange sections, olives, radish, red onion, burrata, candied walnuts, frisee, tangerine Aleppo vinaigrette, pumpernickel bread crumbs",
+    15.35
+  ).writeToDOM();
 
-  starters.textContent = "STARTERS";
-  entrees.textContent = "ENTREES";
-  sides.textContent = "SIDES";
-  sweets.textContent = "SWEETS";
+  const salmon = new Meal(
+    "starters",
+    "smoked salmon carpaccio",
+    "red onions, capers, grana padano, lime truffle emulsion, smoke trout caviar, radish, crostini",
+    18.35
+  ).writeToDOM();
 
-  menuContainer.appendChild(starters);
-  menuContainer.appendChild(entrees);
-  menuContainer.appendChild(sides);
-  menuContainer.appendChild(sweets);
+  const korean = new Meal(
+    "starters",
+    "korean argentina red shrimp crab pancake",
+    "tonkatsu, sambal aioli, daikon kimchi",
+    16.35
+  ).writeToDOM();
 
-  const starterMenu = document.createElement("div");
-  starterMenu.className = "content-container";
-  starters.appendChild(starterMenu);
+  const entrees = new Header("entrees").writeToDOM();
 
-  const beet = document.createElement("p");
-  const salmon = document.createElement("p");
-  const korean = document.createElement("p");
+  const snapper = new Meal(
+    "entrees",
+    "america red snapper",
+    "grilled cabbage, green chermoula vinaigrette, zaatar roast marble potatoes, lemon tahini sumac yogurt, pomegranate molasses, toasted pine nuts",
+    38.35
+  ).writeToDOM();
 
-  beet.className = "meal-title";
-  salmon.className = "meal-title";
-  korean.className = "meal-title";
+  const duck = new Meal(
+    "entrees",
+    "duck breast",
+    "nduja creamed cabbage, duck fat roasted baby carrots, kumquat caraway thyme gastrique",
+    38.35
+  ).writeToDOM();
 
-  beet.textContent = "BEET AND BURRATA";
-  salmon.textContent = "SMOKED SALMON CARPACCIO";
-  korean.textContent = "KOREAN ARGENTINA RED SHRIMP CRAB PANCAKE";
+  const venison = new Meal(
+    "entrees",
+    "venison",
+    "sous vide pimento cheese truffle grits, tasso ham creamed kale, green tomato sorghum mostarda, ancho red wine jus",
+    47.35
+  ).writeToDOM();
 
-  starterMenu.appendChild(beet);
-  starterMenu.appendChild(salmon);
-  starterMenu.appendChild(korean);
+  const sides = new Header("sides").writeToDOM();
 
-  const beetText = document.createElement("p");
-  const salmonText = document.createElement("p");
-  const koreanText = document.createElement("p");
+  const kale = new Meal(
+    "sides",
+    "calabrian honey wilted kale",
+    null,
+    9.35
+  ).writeToDOM();
 
-  beetText.className = "meal-text";
-  salmonText.className = "meal-text";
-  koreanText.className = "meal-text";
+  const fries = new Meal(
+    "sides",
+    "truffle parmesan fries",
+    null,
+    12.35
+  ).writeToDOM();
 
-  beetText.textContent =
-    "orange sections, olives, radish, red onion, burrata, candied walnuts, frisee, tangerine Aleppo\r\n vinaigrette, pumpernickel bread crumbs";
-  salmonText.textContent =
-    "red onions, capers, grana padano, lime truffle emulsion, smoke trout caviar, radish, crostini";
-  koreanText.textContent = "tonkatsu, sambal aioli, daikon kimchi";
+  const vegetables = new Meal(
+    "sides",
+    "seasonal vegetables",
+    null,
+    9.35
+  ).writeToDOM();
 
-  beet.appendChild(beetText);
-  salmon.appendChild(salmonText);
-  korean.appendChild(koreanText);
+  const sweets = new Header("sweets").writeToDOM();
 
-	const beetPrice = document.createElement("p");
-	const salmonPrice = document.createElement("p");
-	const koreanPrice = document.createElement("p");
+  const coconutCake = new Meal(
+    "sweets",
+    "flourless chocolate coconut cake",
+    "chantilly, candied almonds, passion fruit rum jam",
+    10.35
+  ).writeToDOM();
 
-	beetPrice.className = "price";
-	salmonPrice.className = "price";
-	koreanPrice.className = "price";
+	const polentaCake = new Meal(
+		"sweets",
+		"warm olive oil pistachio polenta cake",
+		"sea salt olive oil ice cream, blackberry basil jam",
+		10.35
+	).writeToDOM();
 
-	beetPrice.textContent = "15.35";
-	salmonPrice.textContent = "18.35";
-	koreanPrice.textContent = "16.35";
-
-	beet.appendChild(beetPrice);
-	salmon.appendChild(salmonPrice);
-	korean.appendChild(koreanPrice);
-
-
-  content.appendChild(imgContainer);
+	const budino = new Meal(
+    "sweets",
+    "pumpkin budino",
+    "molasses ginger crumble, spiced brown butter butterscotch, chantilly, toasted pecans",
+		10.35
+  ).writeToDOM();
 
   return content;
 }
-// create class to create all of these menu items
