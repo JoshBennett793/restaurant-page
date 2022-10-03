@@ -1,4 +1,4 @@
-export default function createHeader() {
+export default function renderHeader() {
   const content = document.getElementById("content");
 
   const headerContainer = document.createElement("header");

@@ -1,10 +1,4 @@
-export default function createFooter() {
-  const githubIconScript = document.createElement("script");
-  githubIconScript.type = "text/javascript";
-  githubIconScript.src = "https://kit.fontawesome.com/4c536a6bd5.js";
-  githubIconScript.crossOrigin = "anonymous";
-  document.head.appendChild(githubIconScript);
-
+export default function renderFooter() {
   const content = document.getElementById("content");
 
   const footerContainer = document.createElement("footer");

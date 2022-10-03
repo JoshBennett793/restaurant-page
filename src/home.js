@@ -1,13 +1,27 @@
-import createHeader from "./components/header.js";
-import createBody from "./components/home-body.js";
-import createFooter from "./components/footer.js";
-import "./index.css";
-import "./css/header.css";
-import "./css/home-body.css";
-import "./css/footer.css";
+import "./css/home.css";
+
+function createBody() {
+  const content = document.getElementById("content");
+
+  const imgTextContainer = document.createElement("div");
+  imgTextContainer.className = "img-text-cont";
+  content.appendChild(imgTextContainer);
+
+  const restaurantName = document.createElement("span");
+  restaurantName.className = "tagline";
+  restaurantName.textContent = "Sensory indulgence unlocked.";
+  imgTextContainer.appendChild(restaurantName);
+
+  const menuButton = document.createElement("button");
+  menuButton.className = "menu-button";
+  menuButton.textContent = "Menu";
+  imgTextContainer.appendChild(menuButton);
+
+  content.appendChild(imgTextContainer);
+
+  return content;
+}
 
 export default function renderHome() { 
-  document.body.appendChild(createHeader());
 	document.body.appendChild(createBody());
-	document.body.appendChild(createFooter());
 }
