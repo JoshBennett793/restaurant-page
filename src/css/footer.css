@@ -1,33 +1,29 @@
 footer {
   font-size: 2rem;
-	color: white;
+  color: white;
   display: flex;
-	flex-direction: column;
-	margin: 1rem 1rem;
-	gap: 5px;
-	position: fixed;
-	bottom: 0;
-	z-index: 2;
+  flex-direction: column;
+  margin: 1rem 1rem;
+  gap: 5px;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
 }
 
-.fa-github,
-.fa-linkedin {
-  width: 1rem;
+.feather-github,
+.feather-linkedin {
 	color: white;
   transition: transform 0.3s ease-in-out;
 	cursor: pointer;
 }
-.fa-linkedin {
-	color: #5AB0F7;
-}
 
-.fa-github:hover,
-.fa-linkedin:hover {
+.feather-github:hover,
+.feather-linkedin:hover {
   transform: rotate(360deg) scale(1.2);
 }
 
 @media only screen and (max-width: 834px) {
-	footer {
-		font-size: 1.6rem
-	}
+  footer {
+    font-size: 1.6rem;
+  }
 }
