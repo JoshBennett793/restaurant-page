@@ -7,7 +7,6 @@
 	align-items: center;
 	overflow: scroll;
 	gap: 10vh;
-	/* push container down */
 	padding-top: 20vh;
 }
 
