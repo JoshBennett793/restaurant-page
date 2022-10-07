@@ -1,3 +1,8 @@
+/* show underline under menu tab */
+li.menu:after {
+	transform: scaleX(1);
+}
+
 .menu-container {
 	height: 100vh;
 	width: 100vw;

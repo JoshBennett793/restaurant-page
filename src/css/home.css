@@ -1,3 +1,8 @@
+/* show underline under home tab */
+li.home:after {
+	transform: scaleX(1);
+}
+
 .img-text-cont {
 	margin-left: 10vw;
 	display: flex;
@@ -14,6 +19,7 @@
 	border: 1px solid white;
 	border-radius: 6px;
 	margin-top: 3vh;
+	cursor: pointer;
 }
 
 .menu-button,
