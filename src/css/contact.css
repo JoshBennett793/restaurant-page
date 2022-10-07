@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-/* show underline under contact tab */
-li.contact:after {
-  transform: scaleX(1);
-}
-
 #address-and-num {
   text-align: center;
   margin-top: 4vh;

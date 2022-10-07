@@ -1,3 +1,7 @@
+.active {
+	color: #e33434da;
+}
+
 header {
   width: 100vw;
   color: var(--font-color);
@@ -33,28 +37,22 @@ header li {
   color: var(--font-color);
 }
 
-header li:after {
-  content: "";
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color: var(--font-color);
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
+header li {
+	-webkit-transition: color 0.25s ease;
+	-moz-transition: color 0.25s ease;
+	-o-transition: color 0.25s ease;
+	transition: color 0.25s ease;
 }
 
-header li:hover:after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+header li:hover {
+	color: #e44343da;
 }
 
 .name {
   font-family: "Alexandra", Verdana, Tahoma, sans-serif;
   font-size: clamp(4vw, 5.5vw, 7vw);
   margin-left: 14px;
+	filter: drop-shadow(0 0 10px #e33434da);
 }
 
 @media only screen and (max-width: 834px) {

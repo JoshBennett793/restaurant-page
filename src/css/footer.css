@@ -1,6 +1,5 @@
 footer {
   font-size: 2rem;
-  color: white;
   display: flex;
   flex-direction: column;
   margin: 1rem 1rem;
@@ -12,14 +11,17 @@ footer {
 
 .feather-github,
 .feather-linkedin {
-	color: white;
-  transition: transform 0.3s ease-in-out;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 	cursor: pointer;
 }
 
 .feather-github:hover,
 .feather-linkedin:hover {
   transform: rotate(360deg) scale(1.2);
+	stroke: #e33434da;
 }
 
 @media only screen and (max-width: 834px) {

@@ -1,80 +1,74 @@
-/* show underline under menu tab */
-li.menu:after {
-	transform: scaleX(1);
-}
-
 .menu-container {
-	height: 100vh;
-	width: 100vw;
-	padding: 5vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	overflow: scroll;
-	gap: 10vh;
-	padding-top: 20vh;
+  height: 100vh;
+  width: 100vw;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  gap: 10vh;
+  padding-top: 20vh;
 }
 
 .menu-header {
-	width: 50vw;
-	font-family: "Nesans", Verdana, Tahoma, sans-serif;
-	font-size: var(--menu-header-font-size);
-	color: var(--font-color);
+  width: 50vw;
+  font-family: "Nesans", Verdana, Tahoma, sans-serif;
+  font-size: var(--menu-header-font-size);
+  color: var(--font-color);
 
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .menu-header-title {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .content-container {
-	margin-top: 3vh;
+  margin-top: 3vh;
 }
 
 .meal-title {
-	font-family: "Geo", "Nesans" Verdana, Tahoma, sans-serif;
-	font-size: 1.8vw;
+  font-family: "Geo", "Nesans" Verdana, Tahoma, sans-serif;
+  font-size: 1.8vw;
 }
 
 .meal-desc {
-	font-size: 1.4vw;
+  font-size: 1.4vw;
 }
 
 .meal-price {
-	font-size: 1.3vw;
-	margin-bottom: 5vh;
+  font-size: 1.3vw;
+  margin-bottom: 5vh;
 }
 
 @media only screen and (max-width: 834px) {
+  .menu-container {
+    padding: 10vh 0;
+  }
 
-	.menu-container {
-		padding: 10vh 0;
-	}
+  .menu-header:first-child {
+    margin-top: 8vh;
+  }
 
-	.menu-header:first-child {
-		margin-top: 8vh;
-	}
-	
-	.menu-header {
-		width: 75vw;
-		font-size: var(--mobile-font-size);
-		margin-top: 2vh;
-	}
+  .menu-header {
+    width: 75vw;
+    font-size: var(--mobile-font-size);
+    margin-top: 2vh;
+  }
 
-	.meal-title {
-		font-size: 5vw;
-	}
+  .meal-title {
+    font-size: 5vw;
+  }
 
-	.meal-desc {
-		font-size: 4vw;
-	}
+  .meal-desc {
+    font-size: 4vw;
+  }
 
-	.meal-price {
-		font-size: 3.8vw;
-	}
+  .meal-price {
+    font-size: 3.8vw;
+  }
 }
