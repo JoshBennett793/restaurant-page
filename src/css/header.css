@@ -28,6 +28,27 @@ header li {
   font-family: "Nesans", Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: var(--font-color);
+}
+
+header li:after {
+  content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--font-color);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+header li:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 .name {
