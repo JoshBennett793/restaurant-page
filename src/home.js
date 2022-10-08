@@ -4,11 +4,11 @@ function createBody() {
   const content = document.getElementById("content");
 
   const imgTextContainer = document.createElement("div");
-  imgTextContainer.className = "img-text-cont";
+  imgTextContainer.id = "img-text-cont";
   content.appendChild(imgTextContainer);
 
   const restaurantName = document.createElement("span");
-  restaurantName.className = "tagline";
+  restaurantName.id = "tagline";
   restaurantName.textContent = "Sensory indulgence unlocked.";
   imgTextContainer.appendChild(restaurantName);
 

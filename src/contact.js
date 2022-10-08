@@ -22,12 +22,12 @@ const createForm = () => {
   form.appendChild(addressAndNum);
 
   const header = document.createElement("h2");
-  header.className = "header";
+  header.id = "header";
   header.textContent = "GET IN TOUCH";
   form.appendChild(header);
 
   const subHeader = document.createElement("p");
-  subHeader.className = "subheader";
+  subHeader.id = "subheader";
   subHeader.textContent = "We look forward to hearing from you!";
   form.appendChild(subHeader);
 
@@ -35,7 +35,6 @@ const createForm = () => {
   form.appendChild(inputSection);
 
   const formFieldset = document.createElement("fieldset");
-  formFieldset.className = "form-fieldset";
   inputSection.appendChild(formFieldset);
 
   const legend = document.createElement("legend");

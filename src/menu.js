@@ -6,7 +6,7 @@ class Header {
   }
 
   writeToDOM() {
-    const menuContainer = document.querySelector(".menu-container");
+    const menuContainer = document.querySelector("#menu-container");
 
     const header = document.createElement("div");
     header.className = "menu-header";
@@ -56,7 +56,7 @@ function createBody() {
   const content = document.getElementById("content");
 
   const menuContainer = document.createElement("div");
-  menuContainer.className = "menu-container";
+  menuContainer.id = "menu-container";
   content.appendChild(menuContainer);
 
   const starters = new Header("starters").writeToDOM();

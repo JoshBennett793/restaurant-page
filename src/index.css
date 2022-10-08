@@ -40,8 +40,8 @@
   background: 
 	linear-gradient(
 		to left,
-		rgba(0, 0, 0, 0.5),
-		rgba(0, 0, 0, 0.7)			
+		rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.6)			
 		),
 		url(/src/media/restaurant-img.jpg);
 	text-shadow: 0 3px 1px black;
@@ -52,5 +52,3 @@
 	top: 0;
 	z-index: 1;
 }
-
-/* TODO add class names dynamically to show user which tab is selected  */

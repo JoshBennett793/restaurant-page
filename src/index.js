@@ -10,54 +10,54 @@ import renderMenu from "./menu.js";
 import renderForm from "./contact.js";
 
 renderHeader();
-renderHome();
-
-const homeTab = document.querySelector(".home");
-const menuTab = document.querySelector(".menu");
-const contactTab = document.querySelector(".contact");
+renderFooter();
 
 const highlightTab = (newTab) => {
-  const tabs = document.querySelectorAll("li");
+	const tabs = document.querySelectorAll("li");
   tabs.forEach((tab) => {
     tab.classList.remove("active");
   });
-  const activeTab = document.querySelector(`.${newTab}`);
+  const activeTab = document.querySelector(`#${newTab}`);
   activeTab.classList.add("active");
 };
 
 window.addEventListener("Load", highlightTab("home"));
+window.addEventListener("Load", renderHome());
 
 const removeContent = () => {
-  const content = document.getElementById("content");
+	const content = document.getElementById("content");
   const contentToRemove = content.querySelector("div");
   contentToRemove.remove();
 };
 
 const homeBtnEvent = () => {
-  removeContent();
+	removeContent();
   renderHome();
   highlightTab("home");
 };
 
 const menuBtnEvent = () => {
-  removeContent();
+	removeContent();
   renderMenu();
   highlightTab("menu");
 };
 
 const contactBtnEvent = () => {
-  removeContent();
+	removeContent();
   renderForm();
   highlightTab("contact");
 };
-renderFooter();
+
+const homeTab = document.querySelector("#home");
+const menuTab = document.querySelector("#menu");
+const contactTab = document.querySelector("#contact");
 
 homeTab.addEventListener("click", homeBtnEvent);
 
 menuTab.addEventListener("click", menuBtnEvent);
 
 document.addEventListener("click", function (e) {
-  if (e.target && e.target.id === "menu-button") {
+  if (e.target.id === "menu-button") {
     menuBtnEvent();
   }
 });

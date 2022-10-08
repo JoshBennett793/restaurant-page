@@ -8,22 +8,22 @@ export default function renderHeader() {
   headerContainer.appendChild(tabList);
 
   const homeTab = document.createElement("li");
-  homeTab.className = "home";
+  homeTab.id = "home";
   homeTab.textContent = "Home";
   tabList.appendChild(homeTab);
 
   const menuTab = document.createElement("li");
-  menuTab.className = "menu";
+  menuTab.id = "menu";
   menuTab.textContent = "Menu";
   tabList.appendChild(menuTab);
 
   const contactTab = document.createElement("li");
-  contactTab.className = "contact";
+  contactTab.id = "contact";
   contactTab.textContent = "Contact";
   tabList.appendChild(contactTab);
 
 	const restaurantName = document.createElement("h2");
-	restaurantName.className = "name";
+	restaurantName.id = "name";
 	restaurantName.textContent = "Aroma";
 	headerContainer.appendChild(restaurantName);
 

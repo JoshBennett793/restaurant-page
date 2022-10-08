@@ -48,7 +48,7 @@ header li:hover {
 	color: #e44343da;
 }
 
-.name {
+#name {
   font-family: "Alexandra", Verdana, Tahoma, sans-serif;
   font-size: clamp(4vw, 5.5vw, 7vw);
   margin-left: 14px;
@@ -61,7 +61,7 @@ header li:hover {
     gap: 1rem;
   }
 
-  .name {
+  #name {
     font-size: 10vw;
   }
 }

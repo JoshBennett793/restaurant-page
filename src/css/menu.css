@@ -1,4 +1,4 @@
-.menu-container {
+#menu-container {
   height: 100vh;
   width: 100vw;
   padding: 5vw;
@@ -46,7 +46,7 @@
 }
 
 @media only screen and (max-width: 834px) {
-  .menu-container {
+  #menu-container {
     padding: 10vh 0;
   }
 

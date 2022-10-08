@@ -24,11 +24,11 @@
   top: 200px;
 }
 
-.header {
+#header {
   margin: 10vh 0 2vh 0;
 }
 
-.subheader {
+#subheader {
   margin-bottom: 10vh;
 }
 
@@ -46,10 +46,18 @@ textarea {
   background-color: rgba(255, 255, 255, 0.702);
   border-color: #6c6c6c;
   border-radius: 5px;
+	outline: none;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4) inset;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4) inset;
   -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4) inset;
   -webkit-appearance: none;
+}
+
+input:required:focus:valid{
+	border: 2px solid green;
+}
+input:required:focus:invalid:not(input#name) {
+	border: 2px solid red;
 }
 
 #reason-div {

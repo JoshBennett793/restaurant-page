@@ -1,11 +1,11 @@
-.img-text-cont {
+#img-text-cont {
   margin-left: 10vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.menu-button {
+#menu-button {
 	-webkit-appearance: none;
   background-color: transparent;
   width: 10rem;
@@ -23,23 +23,23 @@
 	transition: all 0.25s ease;
 }
 
-.menu-button:hover {
+#menu-button:hover {
 	color: #e44343da;
   outline: 2px solid #e44343da;
 }
 
-.menu-button,
-.tagline {
+#menu-button,
+#tagline {
 	font-family: "Nesans", Verdana, Tahoma, sans-serif;
 	color: var(--font-color);
 }
 
-.tagline {
+#tagline {
   font-size: 3vw;
 }
 
 @media only screen and (max-width: 834px) {
-  .tagline {
+  #tagline {
     font-size: 12vw;
   }
 }
