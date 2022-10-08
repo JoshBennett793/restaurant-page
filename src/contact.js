@@ -3,9 +3,12 @@ import "./css/contact.css";
 const createForm = () => {
   const content = document.getElementById("content");
 
+	const formDiv = document.createElement("div");
+	content.appendChild(formDiv);
+	
   const form = document.createElement("form");
   form.id = "form";
-  content.appendChild(form);
+  formDiv.appendChild(form);
 
   const mainHeader = document.createElement("h1");
   mainHeader.textContent = "CONTACT US";

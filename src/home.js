@@ -13,7 +13,7 @@ function createBody() {
   imgTextContainer.appendChild(restaurantName);
 
   const menuButton = document.createElement("button");
-  menuButton.className = "menu-button";
+  menuButton.id = "menu-button";
   menuButton.textContent = "Menu";
   imgTextContainer.appendChild(menuButton);
 
