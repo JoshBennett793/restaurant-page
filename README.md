@@ -31,3 +31,8 @@ Aroma is a mock restaurant that I have created a clean, minimalist UI for. This 
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
   
+## 👥 Attributions
+
+👤 Photo by [Jason Leung](https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [unsplash](https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+🍽️ [Restaurant Favicon](https://icons8.com/icon/S6LhFdGdbrbq/restaurant) by [Icons8](https://icons8.com)
