@@ -13,7 +13,7 @@ renderHeader();
 renderFooter();
 
 const highlightTab = (newTab) => {
-	const tabs = document.querySelectorAll("li");
+  const tabs = document.querySelectorAll("li");
   tabs.forEach((tab) => {
     tab.classList.remove("active");
   });
@@ -25,42 +25,33 @@ window.addEventListener("Load", highlightTab("home"));
 window.addEventListener("Load", renderHome());
 
 const removeContent = () => {
-	const content = document.getElementById("content");
+  const content = document.getElementById("content");
   const contentToRemove = content.querySelector("div");
   contentToRemove.remove();
 };
 
 const homeBtnEvent = () => {
-	removeContent();
+  removeContent();
   renderHome();
   highlightTab("home");
 };
 
 const menuBtnEvent = () => {
-	removeContent();
+  removeContent();
   renderMenu();
   highlightTab("menu");
 };
 
 const contactBtnEvent = () => {
-	removeContent();
+  removeContent();
   renderForm();
   highlightTab("contact");
 };
 
-const homeTab = document.querySelector("#home");
-const menuTab = document.querySelector("#menu");
-const contactTab = document.querySelector("#contact");
+document.addEventListener("click", (e) => {
+	const target = e.target.textContent;
 
-homeTab.addEventListener("click", homeBtnEvent);
-
-menuTab.addEventListener("click", menuBtnEvent);
-
-document.addEventListener("click", function (e) {
-  if (e.target.id === "menu-button") {
-    menuBtnEvent();
-  }
+	if (target === "Home") homeBtnEvent();
+	if (target === "Menu") menuBtnEvent();
+	if (target === "Contact") contactBtnEvent();
 });
-
-contactTab.addEventListener("click", contactBtnEvent);
-
