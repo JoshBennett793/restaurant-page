@@ -1,3 +1,10 @@
+:root {
+  --home-transition: all 0.25s ease;
+	--button-font-size: 2rem;
+	--tagline-font-size: 4rem;
+	--tagline-font-size-mobile: 3.4rem;
+}
+
 #img-text-cont {
   margin-left: 10vw;
   display: flex;
@@ -6,40 +13,42 @@
 }
 
 #menu-button {
-	-webkit-appearance: none;
   background-color: transparent;
-  width: 10rem;
+  width: 12rem;
   height: 3rem;
-  font-size: 2rem;
-	border-style: none;
-  outline: 1px solid white;
+  font-size: var(--button-font-size);
+  border: 1px solid var(--font-color);
   border-radius: 6px;
   margin-top: 2vh;
   cursor: pointer;
-	
-	-webkit-transition: all 0.25s ease;
-	-moz-transition: all 0.25s ease;
-	-o-transition: all 0.25s ease;
-	transition: all 0.25s ease;
+
+  -webkit-transition: var(--home-transition);
+  -moz-transition: var(--home-transition);
+  -o-transition: var(--home-transition);
+  transition: var(--home-transition);
 }
 
 #menu-button:hover {
-	color: #e44343da;
-  outline: 2px solid #e44343da;
+  color: var(--red);
+  border: 2px solid var(--red);
 }
 
 #menu-button,
 #tagline {
-	font-family: "Nesans", Verdana, Tahoma, sans-serif;
-	color: var(--font-color);
+  font-family: var(--font-family);
+  color: var(--font-color);
 }
 
 #tagline {
-  font-size: 3vw;
+  font-size: var(--tagline-font-size);
 }
 
 @media only screen and (max-width: 834px) {
+  #menu-button {
+    width: 12rem;
+  }
+
   #tagline {
-    font-size: 12vw;
+    font-size: var(--tagline-font-size-mobile);
   }
 }

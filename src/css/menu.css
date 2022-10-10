@@ -1,3 +1,14 @@
+:root {
+  --menu-header-font-size: 4rem;
+	--meal-title-font-size: 1.8rem;
+	--meal-desc-font-size: 1.4rem;
+	--meal-price-font-size: 1.3rem;
+  --mobile-menu-header-font-size: 3rem;
+	--mobile-meal-title-font-size: 1.6rem;
+	--mobile-meal-desc-font-size: 1.4rem;
+	--mobile-meal-price-font-size: 1.3rem;
+}
+
 #menu-container {
   height: 100vh;
   width: 100vw;
@@ -7,21 +18,21 @@
   align-items: center;
   overflow: scroll;
   gap: 10vh;
-  padding-top: 20vh;
+  padding-top: 25vh;
 }
 
-.menu-header {
+.menu-section {
   width: 50vw;
-  font-family: "Nesans", Verdana, Tahoma, sans-serif;
-  font-size: var(--menu-header-font-size);
+  font-family: var(--font-family);
   color: var(--font-color);
-
+	
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .menu-header-title {
+	font-size: var(--menu-header-font-size);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -32,43 +43,43 @@
 }
 
 .meal-title {
-  font-family: "Geo", "Nesans" Verdana, Tahoma, sans-serif;
-  font-size: 1.8vw;
+  font-family: "Geo", var(--font-family);
+  font-size: var(--meal-title-font-size);
 }
 
 .meal-desc {
-  font-size: 1.4vw;
+  font-size: var(--meal-desc-font-size);
 }
 
 .meal-price {
-  font-size: 1.3vw;
+  font-size: var(--meal-price-font-size);
   margin-bottom: 5vh;
 }
 
 @media only screen and (max-width: 834px) {
   #menu-container {
-    padding: 10vh 0;
+    padding: 20vh 0;
   }
 
-  .menu-header:first-child {
-    margin-top: 8vh;
-  }
+	.menu-section {
+		width: 75vw;
+		margin-top: 2vh;
+		margin-left: 2rem;
+	}
 
-  .menu-header {
-    width: 75vw;
-    font-size: var(--mobile-font-size);
-    margin-top: 2vh;
+  .menu-header-title {
+    font-size: var(--mobile-menu-header-font-size);
   }
 
   .meal-title {
-    font-size: 5vw;
+    font-size: var(--mobile-meal-title-font-size);
   }
 
   .meal-desc {
-    font-size: 4vw;
+    font-size: var(--mobile-meal-desc-font-size);
   }
 
   .meal-price {
-    font-size: 3.8vw;
+    font-size: var(--mobile-meal-price-font-size);
   }
 }

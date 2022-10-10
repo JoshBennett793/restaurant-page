@@ -1,8 +1,8 @@
 :root {
 	--font-color: rgb(234, 234, 234);
 	--font-size: 12vw;
-	--mobile-font-size: 10vw;
-	--menu-header-font-size: 4vw;
+	--font-family: "Nesans", Verdana, Tahoma, sans-serif;
+	--red: #e33434da;
 }
 
 @font-face {

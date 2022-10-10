@@ -23,7 +23,7 @@ export default function renderHeader() {
   tabList.appendChild(contactTab);
 
 	const restaurantName = document.createElement("h2");
-	restaurantName.id = "name";
+	restaurantName.id = "rest-name";
 	restaurantName.textContent = "Aroma";
 	headerContainer.appendChild(restaurantName);
 

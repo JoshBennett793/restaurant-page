@@ -9,7 +9,7 @@ class Header {
     const menuContainer = document.querySelector("#menu-container");
 
     const header = document.createElement("div");
-    header.className = "menu-header";
+    header.className = "menu-section";
     menuContainer.appendChild(header);
 
     const headerTitle = document.createElement("p");

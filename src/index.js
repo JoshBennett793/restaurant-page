@@ -65,3 +65,5 @@ document.addEventListener("click", function (e) {
 contactTab.addEventListener("click", contactBtnEvent);
 
 //Photo by <a href="https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jason Leung</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+// TODO clean up CSS and use CSS variables - almost done
+// TODO add favicon

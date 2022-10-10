@@ -1,5 +1,11 @@
+:root {
+	--footer-transition: all 0.25s ease;
+	--footer-icon-size: 2rem;
+	--footer-icon-size-mobile: 1.6rem;
+}
+
 footer {
-  font-size: 2rem;
+  font-size: var(--footer-icon-size);
   display: flex;
   flex-direction: column;
   margin: 1rem 1rem;
@@ -11,21 +17,21 @@ footer {
 
 .feather-github,
 .feather-linkedin {
-	-webkit-transition: all 0.25s ease;
-	-moz-transition: all 0.25s ease;
-	-o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+	-webkit-transition: var(--footer-transition);
+	-moz-transition: var(--footer-transition);
+	-o-transition: var(--footer-transition);
+  transition: var(--footer-transition);
 	cursor: pointer;
 }
 
 .feather-github:hover,
 .feather-linkedin:hover {
   transform: rotate(360deg) scale(1.2);
-	stroke: #e33434da;
+	stroke: var(--red);
 }
 
 @media only screen and (max-width: 834px) {
   footer {
-    font-size: 1.6rem;
+    font-size: var(--footer-icon-size-mobile);
   }
 }
